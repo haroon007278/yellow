@@ -1,36 +1,71 @@
-newFunction();
+// newFunction();
 
-function newFunction() {
+// function newFunction() {
+//     let input = document.getElementById('inputbox');
+//     let buttons = document.querySelector('button');
+
+//     let string = "";
+//     let arr = Array.from(buttons);
+//     arr.forEach(button => {
+//         button.addEventListener('click', (e) => {
+//             let buttonText = e.target.innerHTML;
+
+//             if (buttonText == '=') {
+//                 try {
+//                     string = eval(string);
+//                     input.value = string;
+//                 } catch (error) {
+//                     input.value = "Error";
+//                 }
+//             }
+//             else if (buttonText === 'AC') {
+//                 string = "";
+//                 input.value = string;
+//             }
+//             else if (buttonText === 'DEL') {
+//                 string = string.substring(0, string.length - 1);
+//                 input.value = string;
+//             }
+//             else {
+//                 // string += buttonText;
+//                 input.value = string;
+//             }
+//         });
+//     });
+// }
+
+
     let input = document.getElementById('inputbox');
-    let buttons = document.querySelectorAll('button');
+    
+    let buttonText = buttons.innerHTML;
+    
+    
+    let noni = "";
+    
 
-    let string = "";
-    let arr = Array.from(buttons);
-    arr.forEach(button => {
-        button.addEventListener('click', (e) => {
-            let buttonText = e.target.innerHTML;
+    document.querySelectorAll(button).forEach(button => {
+        button.addEventListener('click', () => {
 
             if (buttonText == '=') {
-                try {
-                    string = eval(string);
-                    input.value = string;
-                } catch (error) {
-                    input.value = "Error";
-                }
+                noni = eval(noni);
+                input.value = noni;
+                input.value = "Error";
             }
+
+
             else if (buttonText === 'AC') {
-                string = "";
-                input.value = string;
+                noni = "";
+                input.value = noni;
             }
             else if (buttonText === 'DEL') {
-                string = string.substring(0, string.length - 1);
-                input.value = string;
+                noni = noni.substring(0, noni.length - 1);
+                input.value = noni;
             }
             else {
-                string += buttonText;
-                input.value = string;
+                noni += buttonText;
+                input.value = noni;
             }
-        });
-    });
-}
 
+
+        });
+    })
