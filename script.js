@@ -35,37 +35,4 @@
 // }
 
 
-    let input = document.getElementById('inputbox');
-    
-    let buttonText = buttons.innerHTML;
-    
-    
-    let noni = "";
-    
-
-    document.querySelectorAll(button).forEach(button => {
-        button.addEventListener('click', () => {
-
-            if (buttonText == '=') {
-                noni = eval(noni);
-                input.value = noni;
-                input.value = "Error";
-            }
-
-
-            else if (buttonText === 'AC') {
-                noni = "";
-                input.value = noni;
-            }
-            else if (buttonText === 'DEL') {
-                noni = noni.substring(0, noni.length - 1);
-                input.value = noni;
-            }
-            else {
-                noni += buttonText;
-                input.value = noni;
-            }
-
-
-        });
-    })
+  
